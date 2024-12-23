@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BARSANT PROMOCIONES INMOBILIARIAS</title>
+    <title>Residencial Ventanilla</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <!-- 📌 HEADER -->
     <header>
-        <h1>BARSANT PROMOCIONES INMOBILIARIAS</h1>
+        <h1>Residencial Ventanilla</h1>
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#proyecto">El Proyecto</a></li>
-                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#planos">Planos</a></li>
+                <li><a href="#eficiencia">Eficiencia Energética</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
@@ -23,39 +24,124 @@
 
     <!-- 📌 SECCIÓN INICIO -->
     <section id="inicio">
-        <h2>Bienvenido a BARSANT PROMOCIONES</h2>
-        <p>Proyectos residenciales de alta calidad en Granada.</p>
+        <h2>Bienvenido a Residencial Ventanilla</h2>
+        <p>Viviendas residenciales de alta calidad ubicadas en el corazón de Granada.</p>
     </section>
 
     <!-- 📌 SECCIÓN PROYECTO -->
     <section id="proyecto">
         <h2>El Proyecto</h2>
-        <p>Detalles sobre el proyecto en Calle Ventanilla, Granada.</p>
+        <p>El Residencial Ventanilla ofrece viviendas diseñadas con los más altos estándares de calidad y sostenibilidad.</p>
         <ul>
             <li><strong>Ubicación:</strong> Calle Ventanilla, Granada</li>
             <li><strong>Arquitectos:</strong> Javier Barranco Vela y Federico del Río Molina</li>
             <li><strong>Estilo:</strong> Residencial moderno con acabados de alta calidad</li>
         </ul>
     </section>
-
+    
     <!-- 📌 SECCIÓN GALERÍA -->
     <section id="galeria">
-        <h2>Galería</h2>
+        <h2>Galería de Imágenes</h2>
         <div class="gallery">
-            <img src="assets/images/foto1.jpg" alt="Imagen Alzado C/ Ventanilla">
-            <img src="assets/images/foto2.jpg" alt="Imagen Detalle Bloque A">
-            <img src="assets/images/foto3.jpg" alt="Imagen Detalle Bloque B">
-            <img src="assets/images/foto4.jpg" alt="Imagen Detalle Bloque C">
-            <img src="assets/images/foto5.jpg" alt="Imagen Detalle Bloque D">
+            <img src="assets/images/foto1.jpg" alt="Imagen 1">
+            <img src="assets/images/foto2.jpg" alt="Imagen 2">
+            <img src="assets/images/foto3.jpg" alt="Imagen 3">
+            <img src="assets/images/foto4.jpg" alt="Imagen 4">
+            <img src="assets/images/foto5.jpg" alt="Imagen 5">
+        </div>
+    </section>
+
+    <!-- 📌 MODAL PARA IMÁGENES -->
+    <div id="modal">
+        <span id="closeModal">&times;</span>
+        <button id="prevBtn">&#10094;</button>
+        <img id="modalImage" src="" alt="Imagen ampliada">
+        <button id="nextBtn">&#10095;</button>
+    </div>
+
+
+    <!-- 📌 SECCIÓN PLANOS -->
+    <section id="planos">
+        <h2>Planos del Proyecto</h2>
+        <div class="planos-tabs">
+            <button class="tab active" onclick="showPlano('primero')">Primero B</button>
+            <button class="tab" onclick="showPlano('segundo')">Segundo A</button>
+            <button class="tab" onclick="showPlano('tercero')">Tercero A</button>
+            <button class="tab" onclick="showPlano('cuarto')">Cuarto B</button>
+        </div>
+        <div class="planos-content">
+            <div id="primero" class="plano active">
+                <img src="assets/images/foto1.jpg" alt="Plano Primero B">
+                <h3>Primero B</h3>
+                <p><strong>Precio:</strong> 311.000€</p>
+                <p><strong>Habitaciones:</strong> 3</p>
+                <p><strong>Baños:</strong> 2</p>
+                <p><strong>Tamaño:</strong> 121 m²</p>
+            </div>
+            <div id="segundo" class="plano">
+                <img src="assets/images/foto2.jpg" alt="Plano Segundo A">
+                <h3>Segundo A</h3>
+                <p><strong>Precio:</strong> 295.000€</p>
+                <p><strong>Habitaciones:</strong> 2</p>
+                <p><strong>Baños:</strong> 1</p>
+                <p><strong>Tamaño:</strong> 98 m²</p>
+            </div>
+            <div id="tercero" class="plano">
+                <img src="assets/images/foto3.jpg" alt="Plano Tercero A">
+                <h3>Tercero A</h3>
+                <p><strong>Precio:</strong> 325.000€</p>
+                <p><strong>Habitaciones:</strong> 3</p>
+                <p><strong>Baños:</strong> 2</p>
+                <p><strong>Tamaño:</strong> 115 m²</p>
+            </div>
+            <div id="cuarto" class="plano">
+                <img src="assets/images/foto4.jpg" alt="Plano Cuarto B">
+                <h3>Cuarto B</h3>
+                <p><strong>Precio:</strong> 350.000€</p>
+                <p><strong>Habitaciones:</strong> 4</p>
+                <p><strong>Baños:</strong> 3</p>
+                <p><strong>Tamaño:</strong> 130 m²</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📌 SECCIÓN EFICIENCIA ENERGÉTICA -->
+    <section id="eficiencia">
+        <h2>Eficiencia Energética</h2>
+        <p>Nuestras viviendas están diseñadas para ser energéticamente eficientes.</p>
+        <ul>
+            <li><strong>Clase energética:</strong> A+</li>
+            <li><strong>Índice de rendimiento global:</strong> 28,4</li>
+            <li><strong>Índice de energía renovable:</strong> 32,1</li>
+            <li><strong>Rendimiento energético del edificio:</strong> 5,6</li>
+        </ul>
+        <div class="eficiencia-barra">
+            <span style="width: 90%;" class="barra verde"></span>
         </div>
     </section>
 
     <!-- 📌 SECCIÓN CONTACTO -->
     <section id="contacto">
         <h2>Contacto</h2>
-        <p>Para más información, contáctanos a través de nuestro formulario.</p>
+        <p>Ponte en contacto con nosotros para más información sobre el Residencial Ventanilla.</p>
         <form>
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
             
-            <labe
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Tu email" required>
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Tu mensaje"></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+
+    <!-- 📌 FOOTER -->
+    <footer>
+        <p>&copy; 2024 Residencial Ventanilla. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

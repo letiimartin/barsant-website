@@ -57,7 +57,7 @@ footer {
     padding: 1em 0;
     margin-top: 2em;
 }
-/* Modal para Galería */
+/* MODAL */
 #modal {
     display: none;
     position: fixed;
@@ -69,6 +69,7 @@ footer {
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    overflow: hidden;
 }
 
 #modal.active {
@@ -77,11 +78,51 @@ footer {
 
 
 #modal img {
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
+/* BOTÓN CERRAR MODAL */
+#closeModal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* BOTONES DE NAVEGACIÓN */
+#prevBtn, #nextBtn {
+    position: absolute;
+    top: 50%;
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 1001;
+    transform: translateY(-50%);
+    border-radius: 5px;
+}
+
+#prevBtn {
+    left: 20px;
+}
+
+#nextBtn {
+    right: 20px;
+}
+
+#prevBtn:hover, #nextBtn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
 
 
 #scrollTopBtn {
@@ -111,4 +152,93 @@ ul {
 
 ul li {
     margin: 5px 0;
+}
+
+
+/* SECCIÓN PLANOS */
+#planos {
+    text-align: center;
+    padding: 2em;
+}
+
+.planos-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.planos-tabs .tab {
+    margin: 0 5px;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.planos-tabs .tab.active {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+.planos-content .plano {
+    display: none;
+    text-align: center;
+}
+
+.planos-content .plano.active {
+    display: block;
+}
+
+/* SECCIÓN EFICIENCIA ENERGÉTICA */
+#eficiencia {
+    text-align: center;
+    padding: 2em;
+    background-color: #f9f9f9;
+}
+
+#eficiencia ul {
+    list-style: none;
+    padding: 0;
+}
+
+#eficiencia li {
+    margin: 5px 0;
+}
+
+.eficiencia-barra {
+    width: 80%;
+    margin: 20px auto;
+    background: #ddd;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.eficiencia-barra .barra {
+    display: block;
+    height: 100%;
+}
+
+.eficiencia-barra .barra.verde {
+    background: #4caf50;
+}
+
+/* SECCIÓN GALERÍA */
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    border-color: #2c3e50;
 }
